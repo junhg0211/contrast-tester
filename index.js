@@ -96,7 +96,7 @@ function refreshDivs() {
 
   contrastsDiv.innerHTML = "";
   contrasts
-    .sort((a, b) => a[2] - b[2])
+    .sort((a, b) => b[2] - a[2])
     .forEach(contrast => {
       const [a, b, c] = contrast;
       const div = document.createElement("div");
