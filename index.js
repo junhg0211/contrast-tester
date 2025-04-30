@@ -106,9 +106,18 @@ function refreshDivs() {
 
       const contraNumber = c.toFixed(2);
 
-      div.innerText = `${contraNumber} ${emoji}`;
-      div.style.color = a;
-      div.style.backgroundColor = b;
+      const aBack = document.createElement("div");
+      aBack.innerText = `${contraNumber} ${emoji}`;
+      aBack.style.color = a;
+      aBack.style.backgroundColor = b;
+      div.appendChild(aBack);
+
+      const bBack = document.createElement("div");
+      bBack.innerText = `${b} - ${a}`;
+      bBack.style.color = b;
+      bBack.style.backgroundColor = a;
+      div.appendChild(bBack);
+
       contrastsDiv.appendChild(div);
     });
 }
