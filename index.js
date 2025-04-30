@@ -77,7 +77,20 @@ function refreshDivs() {
     const textColor = calculateColorContrast("#ffffff", c) < 7 ? "black" : "white";
 
     const div = document.createElement("div");
-    div.innerText = c;
+
+    const span = document.createElement("span");
+    span.innerText = c;
+    div.appendChild(span);
+
+    const deleteButton = document.createElement("button");
+    deleteButton.innerText = "Delete";
+    deleteButton.onclick = () => {
+      const index = colors.indexOf(c);
+      colors.splice(index, 1);
+      refreshDivs();
+    };
+    div.appendChild(deleteButton);
+
     div.style.backgroundColor = c;
     div.style.color = textColor;
     colorsDiv.appendChild(div);
