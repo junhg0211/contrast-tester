@@ -97,7 +97,16 @@ function refreshDivs() {
     .forEach(contrast => {
       const [a, b, c] = contrast;
       const div = document.createElement("div");
-      div.innerText = c;
+     
+      let emoji;
+      if (c < 3) emoji = "😭";
+      else if (c < 4.5) emoji = "🥺";
+      else if (c < 7) emoji = "☺️";
+      else emoji = "🥰";
+
+      const contraNumber = c.toFixed(2);
+
+      div.innerText = `${contraNumber} ${emoji}`;
       div.style.color = a;
       div.style.backgroundColor = b;
       contrastsDiv.appendChild(div);
