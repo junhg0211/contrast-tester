@@ -74,9 +74,12 @@ function refreshDivs() {
   // colorsdiv
   colorsDiv.innerHTML = "";
   colors.forEach(c => {
+    const textColor = calculateColorContrast("#ffffff", c) < 7 ? "black" : "white";
+
     const div = document.createElement("div");
     div.innerText = c;
     div.style.backgroundColor = c;
+    div.style.color = textColor;
     colorsDiv.appendChild(div);
   });
 
