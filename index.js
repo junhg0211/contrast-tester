@@ -100,6 +100,7 @@ function refreshDivs() {
     .forEach(contrast => {
       const [a, b, c] = contrast;
       const div = document.createElement("div");
+      div.classList.add("contrast");
      
       let emoji;
       if (c < 3) emoji = "😭";
