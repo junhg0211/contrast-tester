@@ -77,6 +77,7 @@ function refreshDivs() {
     const textColor = calculateColorContrast("#ffffff", c) < 7 ? "black" : "white";
 
     const div = document.createElement("div");
+    div.classList.add("color");
 
     const span = document.createElement("span");
     span.innerText = c;
@@ -124,12 +125,16 @@ function refreshDivs() {
       const contraNumber = c.toFixed(2);
 
       const aBack = document.createElement("div");
+      aBack.classList.add("a-back");
+      aBack.classList.add("back");
       aBack.innerText = `${contraNumber} ${emoji}`;
       aBack.style.color = a;
       aBack.style.backgroundColor = b;
       div.appendChild(aBack);
 
       const bBack = document.createElement("div");
+      bBack.classList.add("b-back");
+      bBack.classList.add("back");
       bBack.innerText = `${b} - ${a}`;
       bBack.style.color = b;
       bBack.style.backgroundColor = a;

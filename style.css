@@ -3,9 +3,20 @@ body {
 }
 
 .colors {
+    margin-bottom: 16px;
+}
+
+.color {
     margin-bottom: 8px;
+    padding: 4px;
+    box-shadow: lightgrey 0 0 4px;
 }
 
 .contrast {
     margin-bottom: 8px;
+    box-shadow: lightgrey 0 0 4px;
+}
+
+.contrast .back {
+    padding: 4px;
 }
