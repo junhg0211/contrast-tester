@@ -122,7 +122,7 @@ function refreshDivs() {
       else if (c < 7) emoji = "☺️";
       else emoji = "🥰";
 
-      const contraNumber = c.toFixed(2);
+      const contraNumber = c.toFixed(8);
 
       const aBack = document.createElement("div");
       aBack.classList.add("a-back");
