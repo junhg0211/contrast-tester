@@ -92,6 +92,15 @@ function refreshDivs() {
     };
     div.appendChild(deleteButton);
 
+    const recolorButton = document.createElement("button");
+    recolorButton.innerText = "Recolor";
+    recolorButton.onclick = () => {
+      const index = colors.indexOf(c);
+      colors.splice(index, 1, prompt());
+      refreshDivs();
+    };
+    div.appendChild(recolorButton);
+
     div.style.backgroundColor = c;
     div.style.color = textColor;
     colorsDiv.appendChild(div);
